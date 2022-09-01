@@ -22,6 +22,12 @@ export const updateUnLikeThunk = createAsyncThunk("react/updateUnLikeThunk",asyn
 const reactSlice = createSlice({
   name: "react",
   initialState,
+  reducers: {
+    addReact: (state, action) => {
+      state.likes = action.payload.likes
+      state.unlikes = action.payload.unLikes
+    }
+  },
 
   extraReducers: builder => {
     builder.addCase(updateLikeThunk.fulfilled, (state, action) => {

@@ -55,8 +55,8 @@
         "tailwind",
         "css"
       ],
-      "likes": 4,
-      "unlikes": 1
+      "likes": 13,
+      "unlikes": 4
     },
     {
       "id": 4,
@@ -93,7 +93,7 @@
         "css",
         "ui"
       ],
-      "likes": 18,
+      "likes": 22,
       "unlikes": 15
     },
     {
@@ -131,7 +131,7 @@
         "css",
         "ui"
       ],
-      "likes": 0,
+      "likes": 2,
       "unlikes": 2
     }
   ],
