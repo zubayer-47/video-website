@@ -5,7 +5,7 @@ import { searched } from "../../features/filter/filterSlice";
 
 export default function Search() {
     const dispatch = useDispatch();
-    const { search } = useSelector((state) => state.filter);
+    const { search, isReset } = useSelector((state) => state.filter);
     const [input, setInput] = useState(search);
 
     const match = useMatch("/");
@@ -14,12 +14,12 @@ export default function Search() {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(searched(input));
-
         // if user is not in home page, redirect to home page
         if (!match) {
             navigate("/");
         }
     };
+    // console.log('rendering', input);
 
     return (
         <form onSubmit={handleSubmit}>
@@ -28,7 +28,7 @@ export default function Search() {
                 type="search"
                 name="search"
                 placeholder="Search"
-                value={input}
+                value={isReset ? "" : input}
                 onChange={(e) => setInput(e.target.value)}
             />
         </form>
