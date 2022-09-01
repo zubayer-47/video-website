@@ -2,13 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchVideos } from "../../features/videos/videosSlice";
 
 export default function Pagination() {
-  const { totalVideos, videos } = useSelector((state) => state.videos);
+  const { totalVideos } = useSelector((state) => state.videos);
   const { tags, search } = useSelector((state) => state.filter);
   const dispatch = useDispatch();
 
-  const length = videos.length > 5 ? videos.length : totalVideos;
-
-  const paginate = new Array(Math.ceil(length / 5)).fill("");
+  const paginate = new Array(Math.ceil(totalVideos / 5)).fill("");
 
   const handlePaginate = (page) => {
     dispatch(fetchVideos({ search, tags, _page: page }));

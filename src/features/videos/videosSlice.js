@@ -40,7 +40,6 @@ const videoSlice = createSlice({
             .addCase(fetchVideos.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.videos = action.payload;
-                state.totalVideos = action.payload?.length;
             })
             .addCase(fetchVideos.rejected, (state, action) => {
                 state.isLoading = false;
@@ -48,9 +47,9 @@ const videoSlice = createSlice({
                 state.isError = true;
                 state.error = action.error?.message;
             })
-            // .addCase(fetchAllVideos.fulfilled, (state, action) => {
-            //     state.totalVideos = action.payload?.length;
-            // })
+            .addCase(fetchAllVideos.fulfilled, (state, action) => {
+                state.totalVideos = action.payload?.length;
+            })
     },
 });
 
