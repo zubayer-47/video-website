@@ -1,7 +1,5 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getTags } from "./tagsAPI";
-
-const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
-
 const initialState = {
     tags: [],
     isLoading: false,

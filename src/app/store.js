@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import filterReducer from "../features/filter/filterSlice";
-import reactSlice from "../features/react/reactSlice";
+import filterByAuthorReducer from "../features/filterByAuthor/filterByAuthorSlice";
+import reactReducer from "../features/react/reactSlice";
 import relatedVideosReducer from "../features/relatedVideos/relatedVideosSlice";
 import tagsReducer from "../features/tags/tagsSlice";
 import videoReducer from "../features/video/videoSlice";
@@ -13,6 +14,7 @@ export const store = configureStore({
         video: videoReducer,
         relatedVideos: relatedVideosReducer,
         filter: filterReducer,
-        react: reactSlice,
+        react: reactReducer,
+        filterByAuthor: filterByAuthorReducer,
     },
 });

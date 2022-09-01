@@ -12,6 +12,10 @@ export default function Tags() {
     dispatch(fetchTags());
   }, [dispatch]);
 
+  const handleToggle = () => {
+    dispatch(fetchTags());
+  }
+
   const handleReset = () => {
     dispatch(resetFilters())
   }

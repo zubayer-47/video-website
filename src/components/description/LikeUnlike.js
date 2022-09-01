@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import likeImage from "../../assets/like.svg";
 import unlikeImage from "../../assets/unlike.svg";
 import {
-    addReact,
-    updateLikeThunk,
-    updateUnLikeThunk
+  addReact,
+  updateLikeThunk,
+  updateUnLikeThunk
 } from "../../features/react/reactSlice";
 
 export default function LikeUnlike({ videoId, videoLikes, videoUnlikes }) {

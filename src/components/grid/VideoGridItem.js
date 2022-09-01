@@ -22,7 +22,7 @@ export default function VideoGridItem({ video = {} }) {
                 </div>
 
                 <div className="flex flex-row mt-2 gap-2">
-                    <Link to={`videos/${id}`} className="shrink-0">
+                    <Link to={`author/${author}`} className="shrink-0">
                         <img
                             src={avatar}
                             className="rounded-full h-6 w-6"
@@ -38,7 +38,7 @@ export default function VideoGridItem({ video = {} }) {
                         </Link>
                         <Link
                             className="text-gray-400 text-xs mt-2 hover:text-gray-600"
-                            to={`videos/${id}`}
+                            to={`author/${author}`}
                         >
                             {author}
                         </Link>

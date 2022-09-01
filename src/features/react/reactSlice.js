@@ -1,6 +1,5 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { updateLikes, updateUnLikes } from "./reactAPI";
-
-const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 const initialState = {
   likes: 0,

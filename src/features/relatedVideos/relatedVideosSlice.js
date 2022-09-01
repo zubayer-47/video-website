@@ -1,6 +1,5 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getRelatedVideos } from "./relatedVideosAPI";
-
-const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 const initialState = {
     relatedVideos: [],
