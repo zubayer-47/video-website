@@ -10,10 +10,16 @@ export const getVideos = async (tags, search, _page = 1, _limit = 5) => {
   if (search !== "") {
     queryString += `&q=${search}`;
   }
+	let paginate = null;
+	if (!queryString.length) {
+		paginate = `&_limit=${_limit}&_page=${_page}`;
+	} else {
+		paginate = '';
+	}
 
-  queryString += `&_limit=${_limit}&_page=${_page}`;
+  // queryString += `&_limit=${_limit}&_page=${_page}`;
   
-  const response = await axios.get(`/videos/?${queryString}`);
+  const response = await axios.get(`/videos/?${queryString}${paginate}`);
 
   return response.data;
 };
